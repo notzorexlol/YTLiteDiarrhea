@@ -89,6 +89,12 @@ jobs:
       - name: Download YouTube Plus (by version)
         if: ${{ inputs.tweak_version != '' }}
         run: |
+          case "${{ inputs.tweak_version }}" in
+            5.2|5.2.1|5.2.2|5.3*|5.4*|5.5*)
+              echo "::error::Version ${{ inputs.tweak_version }} requires Patreon. Use 5.2b4 (last free release) instead."
+              exit 1
+              ;;
+          esac
           deb_url="https://github.com/dayanch96/YTLite/releases/download/v${{ inputs.tweak_version }}/com.dvntm.ytlite_${{ inputs.tweak_version }}_iphoneos-arm.deb"
           wget "$deb_url" --no-verbose -O ytplus.deb
 

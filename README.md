@@ -109,7 +109,7 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 <ul>
    <li><strong>Latest confirmed:</strong> <em>21.16.2</em></li>
    <li><strong>Date tested:</strong> <em>Apr 23, 2026</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2.1</em></li>
+   <li><strong>YouTube Plus:</strong> <em>5.2b4</em> (last free release; 5.2+ requires Patreon)</li>
 </ul>
 
 ## Tweak Integration Details
