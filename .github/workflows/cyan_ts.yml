@@ -119,7 +119,7 @@ jobs:
           for f in *.deb; do
             [ -f "$f" ] && tweaks="$tweaks $f"
           done
-          cgen -uwef $tweaks -n "${{ github.event.inputs.display_name }}" -b ${{ github.event.inputs.bundle_id }} -o cyan_YouTubePlus_${{ github.event.inputs.tweak_version }}.cyan
+          cgen -wef $tweaks -n "${{ github.event.inputs.display_name }}" -b ${{ github.event.inputs.bundle_id }} -o cyan_YouTubePlus_${{ github.event.inputs.tweak_version }}.cyan
 
       - name: Generate .zip file for TrollFools
         if: ${{ github.event.inputs.create_tf }}

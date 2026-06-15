@@ -107,9 +107,9 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 
 ## Supported YouTube Version
 <ul>
-   <li><strong>Latest confirmed:</strong> <em>21.16.2</em></li>
-   <li><strong>Date tested:</strong> <em>Apr 23, 2026</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2b4</em> (last free release; 5.2+ requires Patreon)</li>
+   <li><strong>Latest confirmed:</strong> <em>21.06.2</em> (use this base IPA; 21.19+ crashes with older tweak builds)</li>
+   <li><strong>Date tested:</strong> <em>Jun 15, 2026</em></li>
+   <li><strong>YouTube Plus:</strong> <em>5.2b4-diarrhea</em> (built from fork source; no Patreon)</li>
 </ul>
 
 ## Tweak Integration Details

@@ -387,7 +387,13 @@ static UIImage *YTImageNamed(NSString *imageName) {
 void addEndTime(YTPlayerViewController *self, YTSingleVideoController *video, YTSingleVideoTime *time) {
     if (!ytlBool(@"videoEndTime")) return;
 
-    CGFloat rate = video.playbackRate != 0 ? video.playbackRate : 1.0;
+    CGFloat rate = 1.0;
+    if ([video respondsToSelector:@selector(playbackRate)]) {
+        rate = video.playbackRate != 0 ? video.playbackRate : 1.0;
+    } else if ([video respondsToSelector:@selector(activePlaybackRateModel)]) {
+        YTActivePlaybackRateModel *model = video.activePlaybackRateModel;
+        rate = model.activeRate != 0 ? model.activeRate : 1.0;
+    }
     NSTimeInterval remainingTime = (lround(video.totalMediaTime) - lround(time.time)) / rate;
 
     NSDate *estimatedEndTime = [NSDate dateWithTimeIntervalSinceNow:remainingTime];
